@@ -3,143 +3,232 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Git & GitHub Actions – Hackathon Guide</title>
+    <title>Git & GitHub Actions – Hackathon Demo</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="bg-blur bg-blur-1"></div>
+    <div class="bg-blur bg-blur-2"></div>
+
     <header class="navbar">
-        <div class="logo">DevOps Hackathon</div>
+        <div class="logo">
+            <span class="logo-dot"></span>
+            DevOps Hackathon
+        </div>
         <nav>
-            <a href="#git">Git and GitHub</a>
+            <a href="#hero">Home</a>
+            <a href="#git">Git</a>
             <a href="#actions">GitHub Actions</a>
             <a href="#flow">CI/CD Flow</a>
-            <a href="#wish">Good Luck ✨</a>
+            <a href="#wish">Wish ✨</a>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Git & GitHub Actions</h1>
-            <p class="subtitle">
-                A simple static website for your GitHub Actions + GitHub Pages deployment.
-                Learn the basics and show this as your hackathon demo!
+    <section id="hero" class="hero">
+        <div class="hero-left">
+            <p class="pill">🚀 Static Site • GitHub Actions • GitHub Pages</p>
+            <h1>
+                Deploy like a pro,<br />
+                even with just <span>HTML &amp; CSS</span>.
+            </h1>
+            <p class="hero-sub">
+                This page is a simple hackathon demo that explains
+                <strong>Git</strong> and <strong>GitHub Actions</strong>
+                and is deployed automatically using <strong>GitHub Pages</strong>.
             </p>
-            <div class="tags">
-                <span class="tag">Git</span>
-                <span class="tag">GitHub</span>
-                <span class="tag">GitHub Actions</span>
-                <span class="tag">CI/CD</span>
+
+            <div class="hero-buttons">
+                <a href="#flow" class="btn primary">See CI/CD Flow</a>
+                <a href="#git" class="btn ghost">Learn Git Basics</a>
+            </div>
+
+            <div class="hero-badges">
+                <span>• Version Control</span>
+                <span>• Automation</span>
+                <span>• CI/CD</span>
+                <span>• DevOps Mindset</span>
             </div>
         </div>
-        <div class="hero-card">
-            <h2>What are we doing?</h2>
-            <p>
-                ✅ Create a static site with HTML &amp; CSS<br/>
-                ✅ Push code to GitHub<br/>
-                ✅ Use GitHub Actions to deploy<br/>
-                ✅ Host it on GitHub Pages – for free!
-            </p>
+
+        <div class="hero-right">
+            <div class="glass-card hero-card">
+                <p class="card-label">Pipeline Overview</p>
+                <h2>Push → Build → Deploy</h2>
+                <ul>
+                    <li><span>1</span> Write &amp; update your code</li>
+                    <li><span>2</span> Push changes to <code>main</code></li>
+                    <li><span>3</span> GitHub Actions runs workflow</li>
+                    <li><span>4</span> GitHub Pages goes live automatically</li>
+                </ul>
+            </div>
+
+            <div class="glass-card mini-card">
+                <p class="small-title">Status</p>
+                <p class="status success">● Deployed via GitHub Actions</p>
+                <p class="small-caption">Every new push = new version online.</p>
+            </div>
         </div>
     </section>
 
-    <main class="container">
-        <section id="git" class="card-grid">
-            <div class="card">
-                <h3>What is Git?</h3>
-                <p>
-                    Git is a <strong>version control system</strong>. It tracks changes in your code,
-                    lets you go back in time, and makes teamwork easier.
-                </p>
-                <ul>
-                    <li>Save checkpoints with <code>git commit</code></li>
-                    <li>Experiment safely using branches</li>
-                    <li>See who changed what and when</li>
-                </ul>
-            </div>
+    <main class="content">
 
-            <div class="card">
-                <h3>Why do developers love Git?</h3>
-                <p>
-                    Because it turns messy projects into clean, organized history.
-                    If something breaks, you can always roll back to a working version.
-                </p>
-                <ul>
-                    <li>Undo mistakes quickly</li>
-                    <li>Collaborate with your team</li>
-                    <li>Keep your project history forever</li>
-                </ul>
+        <section id="git" class="section">
+            <h2 class="section-title">What is Git?</h2>
+            <p class="section-sub">
+                Git is a <strong>distributed version control system</strong>. It tracks your code history
+                so you can experiment, revert, and collaborate safely.
+            </p>
+
+            <div class="grid grid-3">
+                <div class="info-card">
+                    <h3>Why we use Git</h3>
+                    <p>
+                        Git lets you save your work in snapshots called <strong>commits</strong>.
+                        You can see who changed what, and go back to a stable version
+                        any time.
+                    </p>
+                    <ul>
+                        <li>Undo mistakes easily</li>
+                        <li>Work in teams without conflicts</li>
+                        <li>Keep a clean project history</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>Common Git commands</h3>
+                    <div class="code-block">
+                        <code>git init</code><br />
+                        <code>git status</code><br />
+                        <code>git add .</code><br />
+                        <code>git commit -m "message"</code><br />
+                        <code>git push origin main</code>
+                    </div>
+                    <p class="hint">
+                        These are enough to start your hackathon project.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Git + GitHub</h3>
+                    <p>
+                        Git runs on your local machine.<br />
+                        <strong>GitHub</strong> is the cloud where you push your Git repositories, so
+                        your code is backed up and shareable with the world.
+                    </p>
+                    <p class="hint">
+                        Local changes ➜ Git ➜ GitHub ➜ GitHub Actions ➜ Live website.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <section id="actions" class="section">
+        <section id="actions" class="section section-alt">
             <h2 class="section-title">What is GitHub Actions?</h2>
-            <p class="section-text">
-                GitHub Actions is an <strong>automation engine inside GitHub</strong>.
-                It can build, test, and deploy your code automatically whenever you push.
-                For this project, we use it to deploy our static site to <strong>GitHub Pages</strong>.
+            <p class="section-sub">
+                GitHub Actions is an <strong>automation engine</strong> inside GitHub.  
+                It can build, test, and deploy your project every time you push code.
             </p>
 
-            <div class="card-grid">
-                <div class="card soft">
+            <div class="grid grid-3">
+                <div class="info-card alt">
                     <h3>Automation</h3>
                     <p>
-                        “When I push code, run this workflow.”<br/>
-                        No manual steps. No extra clicks. Just pure automation.
+                        Instead of manually deploying your site, you write a
+                        <strong>YAML workflow file</strong>. GitHub reads that file and runs all
+                        the steps for you.
                     </p>
                 </div>
-                <div class="card soft">
-                    <h3>CI/CD for Students</h3>
+
+                <div class="info-card alt">
+                    <h3>YAML workflow</h3>
                     <p>
-                        Even a simple HTML file can have a professional
-                        <strong>Continuous Integration &amp; Continuous Delivery</strong> pipeline.
+                        The file <code>.github/workflows/deploy.yml</code> describes:
                     </p>
+                    <ul>
+                        <li>When the workflow should run</li>
+                        <li>What jobs and steps to execute</li>
+                        <li>How to build and deploy your website</li>
+                    </ul>
                 </div>
-                <div class="card soft">
-                    <h3>Perfect for Hackathons</h3>
+
+                <div class="info-card alt">
+                    <h3>Why it’s cool for students</h3>
                     <p>
-                        Show the judges that your project is not just code –
-                        it’s <strong>automatically deployed</strong> like in real companies.
+                        With just HTML &amp; CSS you can still show that you understand
+                        <strong>CI/CD</strong>, automation, and modern DevOps practices.
+                        Great talking point in interviews and hackathons.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section id="flow" class="section timeline">
-            <h2 class="section-title">GitHub Actions Deployment Flow</h2>
-            <p class="section-text">
-                Here’s the simple flow you’ll follow in your hackathon:
+        <section id="flow" class="section">
+            <h2 class="section-title">CI/CD Flow for This Project</h2>
+            <p class="section-sub">
+                Here’s the simple pipeline used to deploy this static site with
+                GitHub Actions and GitHub Pages:
             </p>
-            <ol>
-                <li><strong>Write</strong> your HTML &amp; CSS.</li>
-                <li><strong>Push</strong> your code to a GitHub repository.</li>
-                <li><strong>Create</strong> a GitHub Actions workflow file (YAML).</li>
-                <li><strong>Trigger</strong> the workflow by pushing to <code>main</code>.</li>
-                <li><strong>GitHub Pages</strong> hosts your website automatically.</li>
-            </ol>
-            <p class="section-text">
-                That’s it. No server management. No manual uploads. Just push and deploy. 🚀
-            </p>
+
+            <div class="timeline">
+                <div class="step">
+                    <span class="step-badge">1</span>
+                    <div>
+                        <h3>Code</h3>
+                        <p>Create your <code>index.html</code> and <code>styles.css</code> files.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-badge">2</span>
+                    <div>
+                        <h3>Commit &amp; Push</h3>
+                        <p>Use Git to commit changes and push them to the <strong>main</strong> branch on GitHub.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-badge">3</span>
+                    <div>
+                        <h3>Workflow Triggers</h3>
+                        <p>The YAML workflow runs automatically on every push to <code>main</code>.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-badge">4</span>
+                    <div>
+                        <h3>Build &amp; Upload</h3>
+                        <p>GitHub Actions uploads your static files as an artifact ready for deployment.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-badge">5</span>
+                    <div>
+                        <h3>Deploy to GitHub Pages</h3>
+                        <p>GitHub Pages takes the artifact and serves it as a live website to the world.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="wish" class="section wish">
-            <h2>All the best for your hackathon! 💙</h2>
-            <p>
-                Remember: it’s not only about writing code – it’s about showing
-                how you think, how you use tools like <strong>Git</strong> and
-                <strong>GitHub Actions</strong>, and how you work as a team.
-            </p>
-            <p>
-                Keep your commits clean, your workflows simple, and your energy high.
-                You’ve got this. <strong>All the best, future DevOps engineers! 💪</strong>
-            </p>
+        <section id="wish" class="section final-section">
+            <div class="final-card">
+                <h2>All the best for your hackathon! 💙</h2>
+                <p>
+                    You’re not just building a static page.  
+                    You’re showing that you understand <strong>Git</strong>, <strong>GitHub</strong>,
+                    <strong>GitHub Actions</strong>, and <strong>CI/CD</strong>.
+                </p>
+                <p>
+                    Keep your commits meaningful, your workflows simple, and your energy high.
+                    You’ve got this. <strong>Future DevOps engineers in the making! 🚀</strong>
+                </p>
+            </div>
         </section>
     </main>
 
     <footer class="footer">
-        Built with ❤️ using HTML &amp; CSS • Deployed with GitHub Actions &amp; GitHub Pages
+        Built with ❤️ using HTML &amp; CSS • Deployed automatically via GitHub Actions &amp; GitHub Pages
     </footer>
 </body>
 </html>
